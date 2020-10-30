@@ -1,4 +1,6 @@
-
+.nav {
+    color: white;
+}
 .card_container{
     font-family: Oxygen, sans-serif;
     display: grid;
