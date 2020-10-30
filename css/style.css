@@ -1,6 +1,7 @@
 .nav {
     color: white;
 }
+
 .card_container{
     margin-top: 3rem;
     font-family: Oxygen, sans-serif;
@@ -9,4 +10,9 @@
     grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
     grid-gap: 2rem;
     justify-content: center;
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
 }
