@@ -2,6 +2,7 @@
     color: white;
 }
 .card_container{
+    margin-top: 3rem;
     font-family: Oxygen, sans-serif;
     display: grid;
     margin: 2rem;
