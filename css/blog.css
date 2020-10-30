@@ -1,5 +1,6 @@
 
 .blog h1 {
+    text-decoration: overline;
     color: black;
     text-align: center;
     padding-bottom: 5px;
