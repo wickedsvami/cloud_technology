@@ -16,6 +16,13 @@ h1 {
     padding-bottom: 1rem;
 }
 
+.blog img{
+    padding-bottom: 2rem;
+    height: 500px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
 footer {
     left: 0;
     width: 100%;
