@@ -18,7 +18,7 @@ h1 {
 
 .blog img{
     padding-bottom: 2rem;
-    height: 500px;
+    height:25%;
     width: 100%;
     justify-content: space-evenly;
 }
