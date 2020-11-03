@@ -39,8 +39,79 @@
     <img src="imgs/dockerwhale.jpg" width="700" height="500">
     <h3>Step 1. Installing Docker</h3>
     <hr>
+
     <p>You can use either of the 2 links provided below to install Docker on your machine.</p>
-    <p></p>
+    <p>-><a href="https://docs.docker.com/engine/install/">Link 1</a></p>
+    <p>-><a href="https://docs.docker.com/get-docker/">Link 2</a></p>
+
+    <hr>
+    <h3>Step 2. Pull an image from Dockerhub</h3>
+    <hr>
+
+    <p>After you've installed the application and have logged in, you should open up your command prompt
+    and run the command: docker pull ubuntu</p>
+    <p>To check that you've successfully pulled the image, run the command "docker image", which should
+    show you information regarding the image.</p>
+
+    <hr>
+    <h3>Step 3. Committing Changes to a Docker image</h3>
+    <hr>
+
+    <p>First, you should run the Ubuntu image, which would start a Docker container.</p>
+    <p>The command for this is: docker run -it ubuntu:latest /bin/bash</p>
+    <hr>
+    <p>Next, make sure you have everything you need installed and or updated.</p>
+    <p>Run these commands in order:</p>
+    <p>-> apt-get update</p>
+    <p>-> apt-get install apache2</p>
+    <p>-> apt-get install vim</p>
+    <p>Once you're done installing and updating, you can type "exit" into the command line and enter, to
+    exit the container. </p>
+    <hr>
+    <p>Finally, you'll want to check the containers information using the command: docker ps -a</p>
+    <p>You'll run this next command with some of the information you gathered from the previous command
+    mentioned, the command is: </p>
+    <p>-> docker commit (containerID)(name of new image)</p>
+
+    <hr>
+    <h3>Step 4. Sharing Data between a Container and Host</h3>
+    <hr>
+
+    <p>For this next step, before you do anything, you should make sure that no other containers are
+    using port 80 for the sake of this tutorial.  If they are, use the command "docker stop (containerID)"
+    with the container ID being the one of the container using port 80.</p>
+    <hr>
+    <p>Once this is done or if no container was using port 80, you can access the interactive shell.
+    The next command will be dependant on the pathing of your files on your machine, so here is an
+    example of what the command should look like: </p>
+    <p>-> docker run -it -p 127.0.0.1:80:80 -v C:\Users\Student1:/var/www/html (name of new image)
+        /bin/bash</p>
+
+    <hr>
+    <h3>Step 5. vi Editor in UNIX</h3>
+    <hr>
+
+    <p>Now that you are in the instance, type the command "cd /var/www/html" to travel to the html directory.
+    </p>
+    <p>Once in this directory, you should create an index.html file by typing the command "vi index.html",
+    which will simultaneously create the file and put you in vi Editor.  Now that you are in editor,
+    you'll want to press the "i" key on your keyboard, which will prompt "--INSERT--" to pop up at the
+    bottom of the window, which signifies that you are now permitted to edit the file with html source code
+    now.</p>
+    <p>When you are finished editing the file, you can exit the editor by inputting the following commands:</p>
+    <p>-> Press the "Esc" key on your keyboard to exit out of Insert mode</p>
+    <p>-> Type ":wq" to write the file, and then quit vi Editor.</p>
+
+    <hr>
+    <h3>Step 6. Using Docker to host a website</h3>
+    <hr>
+
+    <p>In your command prompt and while still in Docker container instance, type in the following
+        command to start the apache service: </p>
+    <p>-> /etc/init.d/apache2 restart</p>
+    <hr>
+    <p>Next, all you have to do is type in the IP address previously used in step 4, "127.0.0.1", into
+    a browser of your choice.  Once you press enter you should be brought to your site.</p>
 </div>
 
 </body>
